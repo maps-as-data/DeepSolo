@@ -17,14 +17,24 @@ This is the official repo for the papers:
 
 ## News
 
+`2024.04.25` Update models finetuned on BOVText and DSText video datasets. 
+
 `2023.06.2` Update the pre-trained and fine-tuned Chinese scene text spotting model (78.3% 1-NED on ICDAR 2019 ReCTS). 
 
 `2023.05.31` The extension paper (DeepSolo++) is submitted to ArXiv. The code and models will be released soon.
 
 `2023.02.28` DeepSolo is accepted by CVPR 2023. :tada::tada:
 
+***
+
 Relevant Project: 
+
+> :sparkles: [**Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation** ](https://arxiv.org/abs/2401.17904) | [Code](https://github.com/ymy-k/Hi-SAM)
+> 
+> :sparkles: [**GoMatching: A Simple Baseline for Video Text Spotting via Long and Short Term Matching** ](https://arxiv.org/abs/2401.07080) | [Code](https://github.com/Hxyz-123/GoMatching)
+> 
 > [**DPText-DETR: Towards Better Scene Text Detection with Dynamic Points in Transformer** ](https://arxiv.org/abs/2207.04491) | [Code](https://github.com/ymy-k/DPText-DETR)
+
 
 Other applications of [ViTAE](https://github.com/ViTAE-Transformer/ViTAE-Transformer) inlcude: [ViTPose](https://github.com/ViTAE-Transformer/ViTPose) | [Remote Sensing](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing) | [Matting](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting) | [VSA](https://github.com/ViTAE-Transformer/ViTAE-VSA) | [Video Object Segmentation](https://github.com/ViTAE-Transformer/VOS-LLB)
 
@@ -91,6 +101,28 @@ Other applications of [ViTAE](https://github.com/ViTAE-Transformer/ViTAE-Transfo
 |:------:|:------:|:------:|
 |Res-50|SynChinese130K+ArT+LSVT+ReCTS|[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgch1pH08bolhgKEBQQ?e=yeSwwQ)|
 |ViTAEv2-S|SynChinese130K+ArT+LSVT+ReCTS|[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgclTt8LRiZd3yh_c9Q?e=qLhBYG)|
+
+***
+
+> for video datasets
+
+Model finetuned on **[BOVText](https://github.com/weijiawu/BOVText-Benchmark)**:
+
+|Backbone|Config|External Data|Weights|
+|:------:|:------:|:------:|:------:|
+|Res-50|`NUM_QUERIES`: 100, `NUM_POINTS`: 25, `VOC_SIZE`: 5462|SynChinese130K+ArT+LSVT+ReCTS|[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgcskG1ZT6CA4jkz54g?e=ALadSW)|
+
+Model finetuned on **[DSText ](https://rrc.cvc.uab.es/?ch=22)**:
+
+|Backbone|Config|External Data|Weights|
+|:------:|:------:|:------:|:------:|
+|Res-50|`NUM_QUERIES`: 300, `NUM_POINTS`: 25, `VOC_SIZE`: 37|Synth150K+Total-Text+MLT17+IC13+IC15+TextOCR|[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgcsmlIxE_M2822nI_g?e=4Dqyhs)|
+
+**Pre-trained Model for DSText**
+
+|Backbone|Config|Training Data|Weights|
+|:------:|:------:|:------:|:------:|
+|Res-50|`NUM_QUERIES`: 300, `NUM_POINTS`: 25, `VOC_SIZE`: 37|Synth150K+Total-Text+MLT17+IC13+IC15+TextOCR|[OneDrive](https://1drv.ms/u/s!AimBgYV7JjTlgcsoo1OYjqR-YiYq-Q?e=Wao9vV)|
 
 ## Usage
 

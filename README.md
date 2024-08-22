@@ -3,11 +3,12 @@
 <p align="center">
   <a href="#News">News</a> |
   <a href="#Main Results">Main Results</a> |
-  <a href="#Usage">Usage</a> |
+  <a href="#Installation">Installation</a> |
   <a href="#Citation">Citation</a> |
   <a href="#Acknowledgement">Acknowledgement</a>
 </p >
-This is the official repo for the papers:
+
+This is a fork of the official repo for the papers:
 
 > [**DeepSolo: Let Transformer Decoder with Explicit Points Solo for Text Spotting**](https://arxiv.org/abs/2211.10772)
 > 
@@ -79,7 +80,7 @@ Other applications of [ViTAE](https://github.com/ViTAE-Transformer/ViTAE-Transfo
 ## Installation
 
 ```
-git clone https://github.com/rwood-97/DeepSolo.git
+git clone https://github.com/maps-as-data/DeepSolo.git
 cd DeepSolo
 pip install -v .
 ```

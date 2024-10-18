@@ -3,7 +3,7 @@ import argparse
 from detectron2.data.datasets.register_coco import register_coco_instances
 from detectron2.data.datasets.builtin_meta import _get_builtin_metadata
 from .datasets.text import register_text_instances
-from adet.config import get_cfg
+from deepsolo.config import get_cfg
 from detectron2.engine import default_argument_parser
 
 _PREDEFINED_SPLITS_PIC = {
@@ -97,6 +97,3 @@ if __name__ == "__main__":
     cfg.merge_from_file(args.config_file)
     register_all_coco(voc_size_cfg=cfg.MODEL.TRANSFORMER.VOC_SIZE, num_pts_cfg=cfg.MODEL.TRANSFORMER.NUM_POINTS)
 
-else:
-    cfg = get_cfg()
-    register_all_coco(voc_size_cfg=cfg.MODEL.TRANSFORMER.VOC_SIZE, num_pts_cfg=cfg.MODEL.TRANSFORMER.NUM_POINTS)

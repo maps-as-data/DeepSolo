@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 
-import glob
 import os
 from setuptools import find_packages, setup
 import torch
@@ -13,7 +12,7 @@ assert torch_ver >= [1, 3], "Requires PyTorch >= 1.3"
 
 def get_extensions():
     this_dir = os.path.dirname(os.path.abspath(__file__))
-    extensions_dir = os.path.join(this_dir, "adet", "layers", "csrc")
+    extensions_dir = os.path.join(this_dir, "deepsolo", "layers", "csrc")
 
     sources = []
     sources.append(os.path.join(extensions_dir, "vision.cpp"))
@@ -51,7 +50,7 @@ def get_extensions():
 
     ext_modules = [
         extension(
-            "adet._C",
+            "deepsolo._C",
             sources,
             include_dirs=include_dirs,
             define_macros=define_macros,
@@ -63,14 +62,11 @@ def get_extensions():
 
 
 setup(
-    name="AdelaiDet",
-    version="0.2.0",
-    author="Adelaide Intelligent Machines",
-    url="https://github.com/stanstarks/AdelaiDet",
-    description="AdelaiDet is AIM's research "
-    "platform for instance-level detection tasks based on Detectron2.",
-    packages=find_packages(exclude=("configs", "tests")),
-    python_requires=">=3.6",
+    name="DeepSolo",
+    version="0.0.1",
+    url="https://github.com/maps-as-data/DeepSolo",
+    description="Text Detection and Recognition framework based on AdelaiDet and detectron2.",
+    python_requires=">=3.9",
     install_requires=[
         "termcolor>=1.1",
         "Pillow>=6.0",

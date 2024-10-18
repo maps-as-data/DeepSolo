@@ -12,11 +12,11 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 from torch.nn.init import xavier_uniform_, constant_, uniform_, normal_
-from adet.utils.misc import inverse_sigmoid
+from deepsolo.utils.misc import inverse_sigmoid
 from .ms_deform_attn import MSDeformAttn
 from scipy.special import comb as n_over_k
-from adet.utils.curve_utils import upcast
-from adet.modeling.model.utils import MLP, gen_point_pos_embed
+from deepsolo.utils.curve_utils import upcast
+from deepsolo.modeling.model.utils import MLP, gen_point_pos_embed
 
 
 class DeformableTransformer(nn.Module):

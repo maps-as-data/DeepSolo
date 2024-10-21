@@ -66,6 +66,8 @@ setup(
     version="0.0.1",
     url="https://github.com/maps-as-data/DeepSolo",
     description="Text Detection and Recognition framework based on AdelaiDet and detectron2.",
+    packages=find_packages("src/"),
+    package_dir = {"": "src"},
     python_requires=">=3.9",
     install_requires=[
         "termcolor>=1.1",

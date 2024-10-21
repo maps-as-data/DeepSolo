@@ -12,8 +12,8 @@ from deepsolo.modeling.model.matcher import build_matcher
 from deepsolo.modeling.model.detection_transformer import DETECTION_TRANSFORMER
 from deepsolo.utils.misc import NestedTensor
 
-# remove TransformerPureDetector from the registry if it exists
-META_ARCH_REGISTRY._obj_map.pop("TransformerPureDetector", None)
+# remove DeepSolo_TransformerPureDetector from the registry if it exists
+META_ARCH_REGISTRY._obj_map.pop("DeepSolo_TransformerPureDetector", None)
 
 class Joiner(nn.Sequential):
     def __init__(self, backbone, position_embedding):
@@ -105,7 +105,7 @@ def detector_postprocess(results, output_height, output_width, min_size=None, ma
 
 
 @META_ARCH_REGISTRY.register()
-class TransformerPureDetector(nn.Module):
+class DeepSolo_TransformerPureDetector(nn.Module):
     """
         Same as :class:`detectron2.modeling.ProposalNetwork`.
         Use one stage detector and a second stage for instance-wise prediction.

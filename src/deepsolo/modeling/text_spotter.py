@@ -12,6 +12,8 @@ from deepsolo.modeling.model.matcher import build_matcher
 from deepsolo.modeling.model.detection_transformer import DETECTION_TRANSFORMER
 from deepsolo.utils.misc import NestedTensor
 
+# remove TransformerPureDetector from the registry if it exists
+META_ARCH_REGISTRY._obj_map.pop("TransformerPureDetector", None)
 
 class Joiner(nn.Sequential):
     def __init__(self, backbone, position_embedding):
